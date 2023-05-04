@@ -1,0 +1,13 @@
+#notes_heading{
+    font-size: 3rem;
+    margin: 1.5rem;
+
+       /* for text gredient color. */
+  background-image: linear-gradient(45deg, #1deaf1, #fdd4e0);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}

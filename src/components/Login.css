@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&display=swap');
+
+#login_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    font-family: 'Alkatra', cursive;
+}
+
+.from_body {
+    height: 60vh;
+    width: 50vw;
+    /* border: 2px solid red; */
+    border-radius: 3rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.501);
+    background-image: linear-gradient(to left bottom, #260000dd, rgba(9, 255, 222, 0.729), rgba(78, 248, 225, 0.355));
+    animation: bg_img_change ease-in-out 30s infinite;
+
+}
+
+.from_body h2 {
+    /* margin: 1rem; */
+    height: 30%;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.from_body form {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    border-radius: 3rem;
+
+}
+
+.from_body form input {
+    /* border: 2px solid red; */
+    width: 70%;
+    height: 2rem;
+    margin: 1rem;
+    border-radius: 3rem;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Alkatra', cursive;
+    background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(to left bottom, #46ffffdd, rgba(48, 130, 119, 0.729), rgba(0, 3, 2, 0.355));
+
+}
+
+#btn {
+    width: 20%;
+    font-size: 1rem;
+}
+
+/* for responsive */
+@media screen and (max-width:600px) {
+    .from_body{
+        height: 95%;
+        width: 95%;
+    }
+    #btn{
+        width: 50%;
+    }
+}
+
+/* the animation part is here  */
+@keyframes bg_img_change {
+    0% {
+        /* for color gradient  */
+        background-color: rgba(0, 0, 0, 0.759);
+        background-image: linear-gradient(to right,#260000c2, rgba(9, 255, 222, 0.303), rgba(78, 248, 225, 0.303));
+    }
+
+    14.28% {
+        /* for color gradient  */
+        background-color: rgba(0, 0, 0, 0.759);
+        background-image: linear-gradient(to right top,#260000de, rgba(9, 255, 222, 0.525), rgba(78, 248, 225, 0.178));
+    }
+
+    28.56% {
+        /* for color gradient  */
+        background-color: rgba(0, 0, 0, 0.759);
+        background-image: linear-gradient(to top,#260000d6, rgba(9, 255, 222, 0.586), rgba(78, 248, 225, 0.426));
+    }
+
+    42.84% {
+        /* for color gradient  */
+        background-color: rgba(0, 0, 0, 0.759);
+        background-image: linear-gradient(to top left,#260000d7, rgba(9, 255, 222, 0.519), rgba(78, 248, 225, 0.458));
+    }
+
+    57.12% {
+        /* for color gradient  */
+        background-color: rgba(0, 0, 0, 0.759);
+        background-image: linear-gradient(to left,#260000e1, rgba(9, 255, 222, 0.695), rgba(78, 248, 225, 0.447));
+    }
+
+    71.40% {
+        /* for color gradient  */
+        background-color: rgba(0, 0, 0, 0.759);
+        background-image: linear-gradient(to left bottom,#260000dd, rgba(9, 255, 222, 0.729), rgba(78, 248, 225, 0.355));
+    }
+
+    85.68% {
+        /* for color gradient  */
+        background-color: rgba(0, 0, 0, 0.759);
+        background-image: linear-gradient(to bottom,#260000c9, rgba(9, 255, 222, 0.708), rgba(78, 248, 225, 0.334));
+    }
+
+    100% {
+        /* for color gradient  */
+        background-color: rgba(0, 0, 0, 0.759);
+        background-image: linear-gradient(to bottom right,#260000a6, rgba(9, 255, 222, 0.942), rgba(78, 248, 225, 0.519));
+    }
+
+}

@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+.navbody {
+    /* border: 2px solid red; */
+    color: white;
+    display: flex;
+    height: 7vh;
+    /* padding: 1rem; */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* box-shadow: inset 0 0 30px rgba(81, 243, 254, 0.362); */
+    font-family: 'Dancing Script', cursive;
+
+    /* for color gradient  */
+    background-color: rgba(0, 0, 0, 0.451);
+    background-image: linear-gradient(to right, #260000c2, rgba(9, 255, 222, 0.303));
+}
+
+/* for background vdo css */
+.bgvdo {
+    /* position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -1; */
+    /* opacity: 0.9; */
+
+}
+
+/* for background image css */
+.bgimage {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+    animation: bg_img_change ease-in-out 30s infinite;
+    /* animation appiled here for background changing */
+}
+
+.left,
+.right {
+    display: flex;
+    /* padding: 0.3rem; */
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left a,
+h2,
+.right a {
+    margin: 0 2rem;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: white;
+}
+
+.search_container input {
+    border: 2px solid rgba(116, 247, 223, 0.512);
+    box-shadow: inset 0 0 30px rgba(9, 255, 222, 0.303);
+    color: white;
+    background-color: #000000;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    text-align: center;
+    padding: 0.4rem;
+    border-radius: 5rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+.btn {
+    width: 6rem;
+    cursor: pointer;
+}
+
+.active {
+    /* for color gradient  */
+    background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(to right, rgba(9, 255, 222, 0.303), #260000c2);
+    border-radius: 4rem;
+    padding: 0.2rem 1rem;
+    text-align: center;
+}
+
+#toggle {
+    display: none;
+}
+
+@media screen and (max-width:900px) {
+    .navbody {
+        height: 5vh;
+    }
+
+    .left a,
+    h2,
+    .right a {
+        margin: 0.5rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .right{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 40vh;
+        /* color: #4FD1C5; */
+        background-color: rgba(6, 58, 51, 0.948);
+        position: absolute;
+        top: -50%;
+        left: 0%;
+        transition: 0.5s ease-in;
+
+    }
+    .right a{
+        /* border: 2px solid red; */
+        margin: 1rem 0;
+        font-size: 2rem;
+    }
+    .open_right{
+        top:0%;
+    }
+
+    #toggle {
+        display: block;
+    }
+}
+
+/* the animation part is here  */
+@keyframes bg_img_change {
+    0% {
+        /* for color gradient  */
+        background-color: rgb(0, 0, 0);
+        background-image: linear-gradient(to right,#260000c2, rgba(9, 255, 222, 0.303), rgba(78, 248, 225, 0.303));
+    }
+
+    14.28% {
+        /* for color gradient  */
+        background-color: rgb(0, 0, 0);
+        background-image: linear-gradient(to right top,#260000de, rgba(9, 255, 222, 0.525), rgba(78, 248, 225, 0.178));
+    }
+
+    28.56% {
+        /* for color gradient  */
+        background-color: rgb(0, 0, 0);
+        background-image: linear-gradient(to top,#260000d6, rgba(9, 255, 222, 0.586), rgba(78, 248, 225, 0.426));
+    }
+
+    42.84% {
+        /* for color gradient  */
+        background-color: rgb(0, 0, 0);
+        background-image: linear-gradient(to top left,#260000d7, rgba(9, 255, 222, 0.519), rgba(78, 248, 225, 0.458));
+    }
+
+    57.12% {
+        /* for color gradient  */
+        background-color: rgb(0, 0, 0);
+        background-image: linear-gradient(to left,#260000e1, rgba(9, 255, 222, 0.695), rgba(78, 248, 225, 0.447));
+    }
+
+    71.40% {
+        /* for color gradient  */
+        background-color: rgb(0, 0, 0);
+        background-image: linear-gradient(to left bottom,#260000dd, rgba(9, 255, 222, 0.729), rgba(78, 248, 225, 0.355));
+    }
+
+    85.68% {
+        /* for color gradient  */
+        background-color: rgb(0, 0, 0);
+        background-image: linear-gradient(to bottom,#260000c9, rgba(9, 255, 222, 0.708), rgba(78, 248, 225, 0.334));
+    }
+
+    100% {
+        /* for color gradient  */
+        background-color: rgb(0, 0, 0);
+        background-image: linear-gradient(to bottom right,#260000a6, rgba(9, 255, 222, 0.942), rgba(78, 248, 225, 0.519));
+    }
+
+}
