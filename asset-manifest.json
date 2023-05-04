@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/NoteBook_frontend/static/css/main.6333576e.css",
+    "main.js": "/NoteBook_frontend/static/js/main.0ca150c8.js",
+    "index.html": "/NoteBook_frontend/index.html",
+    "main.6333576e.css.map": "/NoteBook_frontend/static/css/main.6333576e.css.map",
+    "main.0ca150c8.js.map": "/NoteBook_frontend/static/js/main.0ca150c8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6333576e.css",
+    "static/js/main.0ca150c8.js"
+  ]
+}
