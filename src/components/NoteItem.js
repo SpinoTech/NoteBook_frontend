@@ -1,7 +1,9 @@
-import React, { useContext ,useState} from 'react'
+import React, { useContext, useState } from 'react'
 import noteContext from "../context/notes/noteContext.js";
 import "./NoteItem.css";
 // import noteContext from "../context/notes/noteContext.js";
+import { SiTeamspeak } from "react-icons/si";
+import { IoMdVolumeOff } from "react-icons/io";
 
 import Modal from 'react-modal';
 
@@ -16,8 +18,8 @@ const customStyles = {
     background: "transparent",
     padding: "0",
     borderRadius: "3rem",
-    border :"3px solid #899494",
-    boxShadow :" 0px 0px 40px #99908f"
+    border: "3px solid #899494",
+    boxShadow: " 0px 0px 40px #99908f"
   },
   overlay: {
     backgroundColor: "#012c2dc9",
@@ -29,7 +31,7 @@ function Note_item(props) {
 
   const context = useContext(noteContext);
   const { deleteNote, editNote } = context;
-  const { note ,showAlart} = props;
+  const { note, showAlart } = props;
   // creating a edit note state
   const [notes, setNotes] = useState({ edit_title: "", edit_description: "", edit_tag: "" })
 
@@ -51,12 +53,12 @@ function Note_item(props) {
   function closeModal(e) {
     // for preventing page load
     e.preventDefault();
-    editNote(note._id, notes.edit_title,notes.edit_description,notes.edit_tag)
+    editNote(note._id, notes.edit_title, notes.edit_description, notes.edit_tag)
     setIsOpen(false);
-    if(notes.edit_title==='' && notes.edit_description==='' && notes.edit_tag==='') showAlart("You Don't Update Anything");
-    else if (notes.edit_title!=='' && notes.edit_description==='' && notes.edit_tag==='')showAlart("The Title of The Note Is Updated Successfully");
-    else if(notes.edit_title==='' && notes.edit_description!=='' && notes.edit_tag==='')showAlart("The Description of The Note Is Updated Successfully");
-    else if(notes.edit_title==='' && notes.edit_description==='' && notes.edit_tag!=='')showAlart("The Tag of The Note Is Updated Successfully");
+    if (notes.edit_title === '' && notes.edit_description === '' && notes.edit_tag === '') showAlart("You Don't Update Anything");
+    else if (notes.edit_title !== '' && notes.edit_description === '' && notes.edit_tag === '') showAlart("The Title of The Note Is Updated Successfully");
+    else if (notes.edit_title === '' && notes.edit_description !== '' && notes.edit_tag === '') showAlart("The Description of The Note Is Updated Successfully");
+    else if (notes.edit_title === '' && notes.edit_description === '' && notes.edit_tag !== '') showAlart("The Tag of The Note Is Updated Successfully");
     else showAlart("The Total Note Is Updated Successfully");
   }
   // modal part end
@@ -67,6 +69,21 @@ function Note_item(props) {
     // (...)it is spread operator and (...note) copies all the exhisting value to the note and add new valuse ([e.target.name]: e.target.value)
 
     setNotes({ ...notes, [e.target.name]: e.target.value });
+  }
+
+  // for speaking functionality:--
+  const [speak, setSpeak] = useState(true);
+  const speakTheDescription = () => {
+    let Speak_content = `${note.description} `
+    let msg = new SpeechSynthesisUtterance(Speak_content);
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[7];
+    window.speechSynthesis.speak(msg);
+    setSpeak(false);
+  }
+  const mute_the_speaker = () => {
+    window.speechSynthesis.cancel();
+    setSpeak(true);
   }
 
   return (
@@ -101,6 +118,7 @@ function Note_item(props) {
       </div>
       <div id="setting">
         <button onClick={openModal}>Update</button>
+        {speak ? <SiTeamspeak size={20} style={{ cursor: "pointer" }} onClick={speakTheDescription} /> : <IoMdVolumeOff size={20} style={{ cursor: "pointer" }} onClick={mute_the_speaker} />}
         <button onClick={onClickDelete}>Delete</button>
 
       </div>
