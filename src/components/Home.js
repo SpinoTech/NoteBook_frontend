@@ -34,7 +34,7 @@ function Home(props) {
       <div id="left">
         <h2>Create Your Note</h2>
         <form action="">
-          <input type="text" placeholder='Heading of the note (Atlist 5 charecters)' id='title' name='title' onChange={onchnage} value={note.title}/>
+          <input type="text" placeholder='Heading(Atlist 5 charecters)' id='title' name='title' onChange={onchnage} value={note.title}/>
           <textarea name="description" id="description" cols="30" rows="10" placeholder='Please Write Something In the Note (Atlist 10 charecters)' onChange={onchnage} value={note.description}></textarea>
           <input type="text" placeholder='tag' id='tag' name='tag' onChange={onchnage} value={note.tag}/>
           <input disabled={note.title.length<5 || note.description.length<10} type="submit" value={note.title.length<5?"write more title" : note.description.length<10?"write more description":"add note"} className='btn' onClick={handleClick} />
