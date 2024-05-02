@@ -10,6 +10,7 @@ export default function Loder() {
                     <div class="leo-core-1"></div>
                 </div>
                 <h1>Loading...</h1>
+                <p>Please Wait ! Server Is Lazy</p>
                 <div class="leo-border-2">
                     <div class="leo-core-2"></div>
                 </div>
