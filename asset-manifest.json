@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/NoteBook_frontend/static/css/main.8400802e.css",
-    "main.js": "/NoteBook_frontend/static/js/main.f9978f88.js",
+    "main.css": "/NoteBook_frontend/static/css/main.9cd6ae16.css",
+    "main.js": "/NoteBook_frontend/static/js/main.b738e1ee.js",
     "index.html": "/NoteBook_frontend/index.html",
-    "main.8400802e.css.map": "/NoteBook_frontend/static/css/main.8400802e.css.map",
-    "main.f9978f88.js.map": "/NoteBook_frontend/static/js/main.f9978f88.js.map"
+    "main.9cd6ae16.css.map": "/NoteBook_frontend/static/css/main.9cd6ae16.css.map",
+    "main.b738e1ee.js.map": "/NoteBook_frontend/static/js/main.b738e1ee.js.map"
   },
   "entrypoints": [
-    "static/css/main.8400802e.css",
-    "static/js/main.f9978f88.js"
+    "static/css/main.9cd6ae16.css",
+    "static/js/main.b738e1ee.js"
   ]
 }
