@@ -38,6 +38,9 @@
      -moz-background-clip: text;
      -moz-text-fill-color: transparent;
   }
+.spinner-box p{
+        font-size: 1.5rem;
+      }
   
   /* SPINNING CIRCLE */
   
@@ -94,6 +97,9 @@
     }
     .spinner-box h1{
         font-size: 4rem;
+      }
+    .spinner-box p{
+        font-size: 0.7rem;
       }
   }
   
